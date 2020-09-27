@@ -1,4 +1,4 @@
 # PANDEMIC A.I.
 
-An attempt at making a reinforment learning machine learning AI
+An attempt at making a reinforcement learning machine learning AI
 Using Tensorflow and python.
