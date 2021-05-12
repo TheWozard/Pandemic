@@ -55,6 +55,9 @@ class Cities(Enum):
     Jakarta = "Jakarta"
     Sydney = "Sydney"
 
+class SpecialCards(Enum):
+    Infection = "Infection"
+
 class Diseases(Enum):
     Blue = "Blue"
     Yellow = "Yellow"
