@@ -1,11 +1,15 @@
+import json
+
 from game.core import GameManger
 from game.params import Cities, Diseases, CitiesInPlay, DiseasesInPlay, MaxOutbreaks, MaxCubes, InfectionRate, CitiesConnections, CitiesDiseases
 
-def create_game():
+def create_game_factory():
     manager = GameManger(CitiesInPlay, DiseasesInPlay, CitiesConnections, CitiesDiseases, MaxOutbreaks, InfectionRate, MaxCubes)
     manager.validate_board_info()
-    print(manager.start_new_game().Board)
+    return manager
 
 
 if __name__ == "__main__": 
-    create_game()
+    factory = create_game_factory()
+    game = factory.start_new_game()
+    print(json.dumps(game.board_state(), indent=4))
