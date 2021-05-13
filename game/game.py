@@ -7,7 +7,7 @@ from typing import Dict
 class Game:
     def __init__(self, board: Dict[Cities, Node]):
         self._board = board
-        self._player_deck = create_player_deck(board.keys(), 2)
+        self._player_deck = create_player_deck(board.keys(), 2, 4, 9)
         self._infection_deck = create_infection_deck(board.keys(), 1)
 
         for _ in range(3):
