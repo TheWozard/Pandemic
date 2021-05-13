@@ -10,7 +10,7 @@ cities = [
 class TestDeckMethods(unittest.TestCase):
 
     def test_create(self):
-        for i in range(100):
+        for _ in range(100):
             deck = create_player_deck(cities, 1, 2, 4)
             self.assertEqual(deck.remaining(), 14)
 
