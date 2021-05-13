@@ -1,6 +1,7 @@
 from enum import Enum
 from typing import Set, Dict
 
+
 class Cities(Enum):
     # Blue
     SanFrancisco = "San Francisco"
@@ -55,8 +56,10 @@ class Cities(Enum):
     Jakarta = "Jakarta"
     Sydney = "Sydney"
 
+
 class SpecialCards(Enum):
     Infection = "Infection"
+
 
 class Diseases(Enum):
     Blue = "Blue"
@@ -64,13 +67,14 @@ class Diseases(Enum):
     Black = "Black"
     Red = "Red"
 
+
 CitiesInPlay = {
     # Blue
     Cities.SanFrancisco, Cities.Chicago, Cities.Montreal, Cities.NewYork, Cities.Atlanta, Cities.Washington, Cities.London, Cities.Essen, Cities.StPetersburg, Cities.Madrid, Cities.Paris, Cities.Milan,
     # Yellow
-    Cities.LosAngeles, Cities.MexicoCity, Cities.Miami, Cities.Bogota, Cities.Lima, Cities.Santiago, Cities.BuenosAries, Cities.SaoPaulo, Cities.Lagos, Cities.Khartoum, Cities.Kinshasa, Cities.Johannesburg, 
+    Cities.LosAngeles, Cities.MexicoCity, Cities.Miami, Cities.Bogota, Cities.Lima, Cities.Santiago, Cities.BuenosAries, Cities.SaoPaulo, Cities.Lagos, Cities.Khartoum, Cities.Kinshasa, Cities.Johannesburg,
     # Black
-    Cities.Moscow, Cities.Istanbul, Cities.Tehran, Cities.Algiers, Cities.Baghdad, Cities.Delhi, Cities.Cairo, Cities.Karachi, Cities.Kolkata, Cities.Riyadh, Cities.Mumbai, Cities.Chennai, 
+    Cities.Moscow, Cities.Istanbul, Cities.Tehran, Cities.Algiers, Cities.Baghdad, Cities.Delhi, Cities.Cairo, Cities.Karachi, Cities.Kolkata, Cities.Riyadh, Cities.Mumbai, Cities.Chennai,
     # Red
     Cities.Beijing, Cities.Seoul, Cities.Shanghai, Cities.Tokyo, Cities.BangKok, Cities.HongKong, Cities.Taipei, Cities.Osaka, Cities.HoChiMinhCity, Cities.Manila, Cities.Jakarta, Cities.Sydney,
 }
@@ -83,14 +87,16 @@ DiseasesInPlay = {
 }
 
 MaxOutbreaks = 8
+
 MaxCubes = {
     Diseases.Blue: 24,
     Diseases.Yellow: 24,
     Diseases.Black: 24,
     Diseases.Red: 24,
 }
-InfectionRate = [2,2,2,3,3,4,4]
-    
+
+InfectionRate = [2, 2, 2, 3, 3, 4, 4]
+
 CitiesConnections = {
     # Blue
     Cities.SanFrancisco: {Cities.Tokyo, Cities.Manila, Cities.Chicago, Cities.LosAngeles},

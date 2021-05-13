@@ -5,9 +5,9 @@ import math
 from game.cards.deck import Deck
 from game.params import Cities, SpecialCards
 
-def create_player_deck(cities: List[Cities], duplicates: int, infection_cards: int, guarantied_count: int) -> Deck[Cities]:
+def create_player_deck(cities: List[Cities], infection_cards: int, guarantied_count: int) -> Deck[Cities]:
     # TODO: Action Cards
-    cards = [ele for ele in cities for _ in range(duplicates)]
+    cards = [*cities]
     random.shuffle(cards)
     starting_cards = cards[:guarantied_count]
     cards = cards[guarantied_count:]
